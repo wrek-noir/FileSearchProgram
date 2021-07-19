@@ -15,7 +15,7 @@ Another problem which is only apparent in Linux is the wildcard functionality. I
 # How To Use
 The program will ask for a desired location where the files you want to search through are located. Simply put the exact location of the folder where the files are located.
 
-Windows: users/wrek-noir/Documents/Test
+Windows: c:\users\wrek-noir\Documents\Test
 
 Linux: /home/wrek-noir/Documents/Test
 
@@ -38,7 +38,7 @@ For this explanation, we'll use the last example. It will then return all files 
 
 The program will then prompt for a desired destination for the files.
 
-Windows: users/wrek-noir/Pictures/Paris
+Windows: c:\users\wrek-noir\Pictures\Paris
 
 Linux /home/wrek-noir/Pictures/Paris
 
