@@ -2,14 +2,20 @@ import fnmatch
 import os
 import shutil
 import glob
+import platform
 from tqdm import tqdm
 from time import sleep
-import platform
 
-while True: #This ties into the while loop at the end for restarting the search program without having to execute the file again.
+while True: #This is used for several loops that exist throughout the program.
     path = input("Where do you want to go? \n") #This takes an input for a desired directory. 
 
-    os.chdir(path) # Sets our working directory to the inputed path from above.
+    isdir = os.path.isdir(path) #Creates a variable for a check to see if the the directory exists.
+    
+    if isdir == False: #If statement to notify user that directory does not exist, and to prompt for the directory again.
+        print("No such directory exists. Check the destination again, please. \n")
+        continue
+            
+    os.chdir(path) #Sets our working directory to the inputed path from above.
 
     current_path = os.getcwd() #Creates a variable for the current directory.
 
@@ -19,12 +25,11 @@ while True: #This ties into the while loop at the end for restarting the search 
 
     source_path = os.listdir() #This creates a variable containg a list of all entries in a given directory.
                                #Our path is left blank as it is self referential.
-
     print('\n')
 
     file_type = input("What kind of file do you want to search for? \n") #This asks what part of a file type that the user
                                                                          #would like to search for and assigns it to a variable.
-                                                                         
+                                                                       
     print('\n')
 
     file_name = input("And what's the name of the file we're looing for? \n") #Creates and assigns a variable with the name of the file. 
