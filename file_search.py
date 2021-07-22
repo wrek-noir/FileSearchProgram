@@ -9,7 +9,7 @@ from time import sleep
 while True: #This is used for several loops that exist throughout the program.
     path = input("Where do you want to go? \n") #This takes an input for a desired directory. 
 
-    isdir = os.path.isdir(path) #Creates a variable for a check to see if the the directory exists.
+    isdir = os.path.isdir(path) #Creates a variable for a check to see if the directory exists.
     
     if isdir == False: #If statement to notify user that directory does not exist, and to prompt for the directory again.
         print("No such directory exists. Check the destination again, please. \n")
